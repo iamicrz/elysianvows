@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import Image from "next/image"
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -29,25 +30,22 @@ export default function ElysianVows() {
 
   const testimonials = [
     {
-      name: "Priya & Arjun",
-      wedding: "Royal Rajasthani Wedding",
+      name: "Lavneeta & Prasad",
+      wedding: "South Indian & Bengali Wedding",
       quote:
-        "Elysian Vows made our wedding dreams come true. Every detail was crafted with such love and care. Our outfits were absolutely magical and made us feel like royalty on our special day.",
-      image: "/images/testimonial-1.png",
+        "Planning a wedding that brought together Bengali and South Indian traditions felt overwhelming at first—but Elysian Vows made it seamless. With different themes for each function, they not only listened to our vision but brought it to life beautifully for us and our families. Every detail was thoughtfully handled, and the coordinated looks made each moment feel truly special. We couldn’t have asked for a better team to bring our story to life.",
     },
     {
-      name: "Kavya & Rohan",
-      wedding: "South Indian Traditional",
+      name: "Krishna & Danny",
+      wedding: "Gujarti & Punjabi Wedding",
       quote:
-        "The team understood our vision perfectly and created the most beautiful traditional ensembles. The intricate work and attention to our cultural heritage was simply breathtaking.",
-      image: "/images/testimonial-2.png",
+        "Planning a wedding from London for a destination celebration in Goa was a task I wasn’t sure how we’d pull off—until we found Elysian Vows. From the very first conversation, they just got us. Whether it was blending my Gujarati roots with Danny’s Punjabi side, or adding little details that reflected our story, every outfit felt thoughtful and completely ‘us.’ They managed everything remotely with ease—from fabric selections to fittings—without compromising on quality or creativity. What touched me most was how they extended that care to our families too. Every look was curated to match the themes of our events, and seeing our loved ones dressed in such coordinated, beautiful ensembles added so much soul to the celebrations. Thank you, Elysian Vows, for turning our vision into something even more magical than we imagined.",
     },
     {
-      name: "Ananya & Vikram",
-      wedding: "Modern Fusion Ceremony",
+      name: "Khushi Kalra",
+      wedding: "A big Punjai Wedding",
       quote:
-        "They perfectly balanced tradition with contemporary elegance. Our wedding outfits were stunning and we received so many compliments. Truly a dream come true.",
-      image: "/images/testimonial-3.png",
+        "As a Punjabi bride, I had a few must-haves in mind—like phulkari and a touch of leheriya—but beyond that, I really needed guidance to bring my trousseau to life. Elysian Vows stepped in like a dream team. They took the time to understand my style, my comfort, and helped me build a collection that had the perfect balance—from intricate, statement pieces to lighter, easy-to-wear outfits. The colors, the detailing, the way every piece felt like me—it was so thoughtfully done. What I ended up with was more than just a trousseau… it was a wardrobe full of joy, emotion, and timeless beauty. Truly beyond what I had imagined.",
     },
   ]
 
@@ -585,34 +583,21 @@ export default function ElysianVows() {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative">
-                <div className="absolute -top-3 -left-3 w-16 h-16 border border-amber-200 rounded-full"></div>
-                <Image
-                  src={testimonials[currentTestimonial].image || "/placeholder.svg"}
-                  alt={testimonials[currentTestimonial].name}
-                  width={500}
-                  height={600}
-                  className="object-cover w-full h-80 relative z-10 rounded-2xl shadow-xl"
-                />
-                <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-gradient-to-br from-amber-100 to-yellow-100 rounded-full"></div>
+          <div className="max-w-3xl mx-auto text-center">
+            <div>
+              <div className="flex items-center justify-center space-x-2 mb-8">
+                <div className="w-8 h-0.5 bg-amber-400"></div>
+                <Heart className="w-4 h-4 text-amber-500" />
+                <div className="w-8 h-0.5 bg-amber-400"></div>
               </div>
+              <blockquote className="text-xl md:text-2xl mb-8 leading-relaxed font-playfair italic text-slate-600">
+                "{testimonials[currentTestimonial].quote}"
+              </blockquote>
               <div>
-                <div className="flex items-center space-x-2 mb-8">
-                  <div className="w-8 h-0.5 bg-amber-400"></div>
-                  <Heart className="w-4 h-4 text-amber-500" />
-                  <div className="w-8 h-0.5 bg-amber-400"></div>
-                </div>
-                <blockquote className="text-xl md:text-2xl mb-8 leading-relaxed font-playfair italic text-slate-600">
-                  "{testimonials[currentTestimonial].quote}"
-                </blockquote>
-                <div>
-                  <p className="text-amber-600 text-lg font-medium mb-2 font-playfair">
-                    {testimonials[currentTestimonial].name}
-                  </p>
-                  <p className="text-slate-500 font-light">{testimonials[currentTestimonial].wedding}</p>
-                </div>
+                <p className="text-amber-600 text-lg font-medium mb-2 font-playfair">
+                  {testimonials[currentTestimonial].name}
+                </p>
+                <p className="text-slate-500 font-light">{testimonials[currentTestimonial].wedding}</p>
               </div>
             </div>
 

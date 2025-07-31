@@ -531,24 +531,22 @@ export default function ElysianVows() {
           </div>
 
           {/* Gallery Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="columns-2 md:columns-4 lg:columns-5 gap-4 mb-16 space-y-4">
             {filteredGallery.map((image) => (
               <div
                 key={image.id}
-                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer"
-                onClick={openWhatsApp}
+                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 block"
               >
                 <Image
                   src={image.src || "/placeholder.svg"}
                   alt={image.alt}
                   width={400}
                   height={600}
-                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <h3 className="text-sm font-medium mb-1">{image.alt}</h3>
-                  <p className="text-xs text-amber-200">View Details</p>
                 </div>
               </div>
             ))}
@@ -556,10 +554,10 @@ export default function ElysianVows() {
 
           <div className="text-center">
             <Button
-              onClick={openWhatsApp}
+              onClick={bookConsultation}
               className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white px-8 py-3 font-light rounded-full"
             >
-              View Complete Gallery
+              Book your consultation
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </div>
@@ -756,7 +754,7 @@ export default function ElysianVows() {
       </section>
 
       {/* Instagram Feed */}
-      <section className="py-20 bg-gradient-to-b from-amber-50 to-yellow-50">
+      <section className="py-20 bg-gradient-to-b from-amber-50 to-yellow-50 hidden">
         <div className="container mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center space-x-2 mb-8">

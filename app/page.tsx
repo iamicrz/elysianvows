@@ -70,7 +70,7 @@ export default function ElysianVows() {
       id: 4,
       category: "bridal",
       alt: "",
-      src: "/images/Bride/bride4.jpg",
+      src: "/images/Bride/bride4.JPG",
     },
     {
       id: 5,

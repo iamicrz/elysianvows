@@ -18,8 +18,6 @@ import {
   Mail,
   MapPin,
   ArrowRight,
-  Heart,
-  Sparkles,
   MessageCircle,
 } from "lucide-react"
 
@@ -321,13 +319,7 @@ export default function ElysianVows() {
         </div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 md:px-12">
-          <div className="mb-8 flex justify-center">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-              <Heart className="w-4 h-4 text-amber-500" />
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-            </div>
-          </div>
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-8 tracking-wide font-playfair text-slate-700">
           Your Story. Our Craft.{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-yellow-600 font-normal italic">
@@ -343,20 +335,11 @@ export default function ElysianVows() {
             className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white px-10 py-4 text-lg font-light rounded-full shadow-xl"
           >
             Begin Your Love Story
-            <Heart className="ml-2 w-5 h-5" />
+
           </Button>
         </div>
 
-        {/* Floating elements */}
-        <div className="absolute top-1/4 left-10 animate-pulse">
-          <Sparkles className="w-6 h-6 text-amber-300" />
-        </div>
-        <div className="absolute top-1/3 right-16 animate-pulse delay-1000">
-          <Heart className="w-5 h-5 text-yellow-300" />
-        </div>
-        <div className="absolute bottom-1/4 left-1/4 animate-pulse delay-500">
-          <Sparkles className="w-4 h-4 text-amber-300" />
-        </div>
+
       </section>
 
       {/* About Section */}
@@ -375,11 +358,7 @@ export default function ElysianVows() {
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-amber-100 to-yellow-100 rounded-full"></div>
             </div>
             <div className="max-w-xl">
-              <div className="flex items-center space-x-2 mb-8">
-                <div className="w-8 h-0.5 bg-amber-400"></div>
-                <Heart className="w-4 h-4 text-amber-500" />
-                <div className="w-8 h-0.5 bg-amber-400"></div>
-              </div>
+
               <h2 className="text-3xl md:text-4xl font-light text-slate-700 mb-8 font-playfair">
                 Our <span className="text-amber-600 italic">Love Story</span>
               </h2>
@@ -410,11 +389,6 @@ export default function ElysianVows() {
       <section id="collections" className="py-24 bg-gradient-to-b from-amber-50 to-yellow-50">
         <div className="container mx-auto px-6 md:px-12">
           <div className="text-center mb-20">
-            <div className="flex items-center justify-center space-x-2 mb-8">
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-              <Heart className="w-4 h-4 text-amber-500" />
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-            </div>
             <h2 className="text-3xl md:text-4xl font-light text-slate-700 mb-6 font-playfair">
               Our Wedding <span className="text-amber-600 italic">Collections</span>
             </h2>
@@ -429,25 +403,21 @@ export default function ElysianVows() {
                 title: "Bridal Couture",
                 description: "Where dreams are drapped in detail. Custom-crafted to reflect your unique essence with elegance and timeless allure. Every stitch is celebration of your story, designed to make you feel nothing less than extraordinary.",
                 image: "/images/bridal-corture.jpg",
-                icon: <Heart className="w-5 h-5" />,
               },
               {
                 title: "Groom's Collection",
                 description: "Sophistication, tailored to command the room. Impeccably crafted ensembles that balance heritage with modernity - designed for the man who leads with presence and dresses with intent.",
                 image: "/images/mens-clothing.jpg",
-                icon: <Sparkles className="w-5 h-5" />,
               },
               {
                 title: "Trousseau Essentials",
                 description: "A wardrobe that travels with you - stylishly. Curated with enduring charm and exquisite refinement, each piece is designed to accompany life's new chapter with grace, versatality, and poise.",
                 image: "/images/trousseau-edit.jpg",
-                icon: <Heart className="w-5 h-5" />,
               },
               {
                 title: "Family Ensembles",
                 description: "Style that celebrates togetherness. Coordinated, yet individually expressive, our designs bring the entire family into focus - crafted to complement every personailty while uniting the celebration in unforgettable style.",
                 image: "/images/family-edit.jpg",
-                icon: <Sparkles className="w-5 h-5" />,
               },
             ].map((collection, index) => (
               <div
@@ -462,31 +432,18 @@ export default function ElysianVows() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                  <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-amber-600">
-                    {collection.icon}
-                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-medium mb-3 font-playfair" style={{ color: '#d27909' }}>{collection.title}</h3>
                   <p className="text-slate-500 mb-4 leading-relaxed text-sm font-light">
-  {collection.description ? (
-    <>
-      <span className="font-bold">{collection.description.split('.')[0]}.</span>
-      <br style={{ lineHeight: '2.5' }} />
-      {collection.description.split('.').slice(1).join('.').trim()}
-    </>
-  ) : null}
-</p>
-                  {/*
-                  <Button
-                    onClick={openWhatsApp}
-                    variant="ghost"
-                    className="text-amber-600 hover:text-amber-700 hover:bg-amber-50 p-0 font-light"
-                  >
-                    Explore Collection
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                  */}
+                    {collection.description ? (
+                      <>
+                        <span className="font-bold">{collection.description.split('.')[0]}.</span>
+                        <br style={{ lineHeight: '2.5' }} />
+                        {collection.description.split('.').slice(1).join('.').trim()}
+                      </>
+                    ) : null}
+                  </p>
                 </div>
               </div>
             ))}
@@ -498,11 +455,6 @@ export default function ElysianVows() {
       <section id="gallery" className="py-24 bg-white">
         <div className="container mx-auto px-6 md:px-12">
           <div className="text-center mb-20">
-            <div className="flex items-center justify-center space-x-2 mb-8">
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-              <Heart className="w-4 h-4 text-amber-500" />
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-            </div>
             <h2 className="text-3xl md:text-4xl font-light text-slate-700 mb-6 font-playfair">
               Our <span className="text-amber-600 italic">Gallery</span>
             </h2>
@@ -568,11 +520,6 @@ export default function ElysianVows() {
       <section id="lovestories" className="py-24 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-6 md:px-12">
           <div className="text-center mb-20">
-            <div className="flex items-center justify-center space-x-2 mb-8">
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-              <Heart className="w-4 h-4 text-amber-500" />
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-            </div>
             <h2 className="text-3xl md:text-4xl font-light text-slate-700 mb-6 font-playfair">
               Beautiful <span className="text-amber-600 italic">Love Stories</span>
             </h2>
@@ -583,11 +530,6 @@ export default function ElysianVows() {
 
           <div className="max-w-3xl mx-auto text-center">
             <div>
-              <div className="flex items-center justify-center space-x-2 mb-8">
-                <div className="w-8 h-0.5 bg-amber-400"></div>
-                <Heart className="w-4 h-4 text-amber-500" />
-                <div className="w-8 h-0.5 bg-amber-400"></div>
-              </div>
               <blockquote className="text-xl md:text-2xl mb-8 leading-relaxed font-playfair italic text-slate-600">
                 "{testimonials[currentTestimonial].quote}"
               </blockquote>
@@ -626,11 +568,6 @@ export default function ElysianVows() {
       <section id="contact" className="py-24 bg-white">
         <div className="container mx-auto px-6 md:px-12">
           <div className="text-center mb-20">
-            <div className="flex items-center justify-center space-x-2 mb-8">
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-              <Heart className="w-4 h-4 text-amber-500" />
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-            </div>
             <h2 className="text-3xl md:text-4xl font-light text-slate-700 mb-6 font-playfair">
               Let's Create <span className="text-amber-600 italic">Magic Together</span>
             </h2>
@@ -676,7 +613,6 @@ export default function ElysianVows() {
                   className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white w-full py-3 font-light rounded-full"
                 >
                   Schedule My Consultation
-                  <Heart className="ml-2 w-4 h-4" />
                 </Button>
               </form>
             </div>
@@ -757,11 +693,6 @@ export default function ElysianVows() {
       <section className="py-20 bg-gradient-to-b from-amber-50 to-yellow-50 hidden">
         <div className="container mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center space-x-2 mb-8">
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-              <Heart className="w-4 h-4 text-amber-500" />
-              <div className="w-8 h-0.5 bg-amber-400"></div>
-            </div>
             <h2 className="text-3xl md:text-4xl font-light text-slate-700 mb-6 font-playfair">
               Follow Our <span className="text-amber-600 italic">Journey</span>
             </h2>

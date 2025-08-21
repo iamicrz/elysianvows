@@ -593,13 +593,13 @@ export default function ElysianVows() {
                   />
                 </div>
                 <Input
-                  type="email ID"
+                  type="email"
                   placeholder="Email Address"
                   className="bg-white border-amber-200 focus:border-amber-400 rounded-xl"
                   required
                 />
                 <Input
-                  type="Phone no."
+                  type="tel"
                   placeholder="Phone Number"
                   className="bg-white border-amber-200 focus:border-amber-400 rounded-xl"
                   required
@@ -749,7 +749,7 @@ export default function ElysianVows() {
                 <div className="text-xs text-slate-400 tracking-[0.3em] uppercase font-light mt-1">Couture Atelier</div>
               </div>
               <p className="text-slate-300 mb-6 leading-relaxed font-light text-center">
-                Where love meets artistry. Creating bespoke Indian couture for your most precious moments.
+                Where love meets artistry. Creating bespoke Indian couture for your most precious moments..
               </p>
               <div className="flex justify-center space-x-4">
                 <Button
